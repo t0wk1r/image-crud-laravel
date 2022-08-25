@@ -13,7 +13,7 @@
             <form style="display: inline-block;" action="{{route('imagets.destroy', $imaget->id)}}" method="post">
                 @csrf
                 @method('delete')
-                <button>Delete</button>
+                <button onclick="return confirm('Are You Sure To Delete This Data?')" >Delete</button>
             </form>
         </td>
     </tr>
@@ -21,3 +21,5 @@
 
 
 </table>
+
+<a href="{{url('/imagets')}}">ALL DATA</a>
